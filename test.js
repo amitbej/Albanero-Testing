@@ -1,6 +1,5 @@
 // --------------- Question 1 ---------------
 
-
 function reverseAndCheckPrimeFactors(x) {
   let reversed = parseInt(x.toString().split("").reverse().join(""));
 
@@ -18,18 +17,24 @@ function reverseAndCheckPrimeFactors(x) {
       reversed /= i;
     }
   }
-
+  /*
   return {
     result: primeFactors.length > 0 ? "Yes" : "No",
     factors: primeFactors,
   };
+  */
+  if (primeFactors.length > 0) {
+    return `Yes: [${primeFactors}]`;
+  }
+
+  return "No";
 }
 
 const result1 = reverseAndCheckPrimeFactors(123);
-console.log(result1.result, "-", result1.factors);
+console.log(result1);
 
 const result2 = reverseAndCheckPrimeFactors(1000);
-console.log(result2.result);
+console.log(result2);
 
 // --------------- Question 2 ---------------
 
